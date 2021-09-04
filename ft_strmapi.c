@@ -6,7 +6,7 @@
 /*   By: wfelipe- < wfelipe-@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:15:15 by wfelipe-          #+#    #+#             */
-/*   Updated: 2021/09/04 19:33:54 by wfelipe-         ###   ########.fr       */
+/*   Updated: 2021/09/04 20:25:48 by wfelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(char const *s, char(*f)(unsigned int, char))
 	char			character;
 
 	if (!s)
-		return(NULL);
+		return (NULL);
 	stringlen = ft_strlen(s);
 	counter = 0;
 	newstring = ft_calloc(stringlen + 1, sizeof(char));

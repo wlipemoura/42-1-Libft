@@ -6,7 +6,7 @@
 /*   By: wfelipe- < wfelipe-@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:15:29 by wfelipe-          #+#    #+#             */
-/*   Updated: 2021/09/04 19:48:06 by wfelipe-         ###   ########.fr       */
+/*   Updated: 2021/09/04 20:18:03 by wfelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*trimmedstring;
 
 	timmed_counter = 0;
-	if (!!s1)
-		return (NULL);
 	trimmed_start = trimmedstart(s1, set);
 	trimmed_end = trimmedend(s1, set);
 	if (trimmed_end - trimmed_start + 1 > 0)
