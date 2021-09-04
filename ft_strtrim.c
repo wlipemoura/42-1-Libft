@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wfelipe- < wfelipe-@student.42sp.org.br    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/04 19:15:29 by wfelipe-          #+#    #+#             */
+/*   Updated: 2021/09/04 19:48:06 by wfelipe-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	trimmedstart(char const *s1, char const *set)
@@ -48,6 +60,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*trimmedstring;
 
 	timmed_counter = 0;
+	if (!!s1)
+		return (NULL);
 	trimmed_start = trimmedstart(s1, set);
 	trimmed_end = trimmedend(s1, set);
 	if (trimmed_end - trimmed_start + 1 > 0)
@@ -68,13 +82,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	timmed_counter = 0;
 	return (trimmedstring + timmed_counter);
 }
-/*
-int	main(void)
-{
-	char	*a;
-
-	a = ft_strtrim(" aaa ", "\t \n");
-	printf("%s\n", a);
-	return(0);
-}
-*/
