@@ -6,7 +6,7 @@
 /*   By: wfelipe- < wfelipe-@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:14:19 by wfelipe-          #+#    #+#             */
-/*   Updated: 2021/09/05 18:31:05 by wfelipe-         ###   ########.fr       */
+/*   Updated: 2021/09/05 19:01:46 by wfelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	cont = 0;
 	if (!src && !dest && n > 0)
 		return (NULL);
+	if (dest == src)
+		return (dest);
 	if (src > dest)
 	{
 		while (cont < n)
