@@ -1,11 +1,12 @@
 NAME = libft.a
 
+INC = libft.h
+
 CC = clang
 
 FLAGS = -Wall -Wextra -Werror -c
 
-.c.o:
-	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
+RM = rm -f
 
 SRC = \
 	ft_atoi.c \
@@ -44,22 +45,22 @@ SRC = \
 	ft_strlen.c \
 	ft_strlcat.c \
 	ft_striteri.c
+
 OBJ = $(SRC:.c=.o)
 
-INC = libft.h
-
-$(NAME): $(OBJ) library
+.c.o:
+	$(CC) $(FLAGS) $< -o $(<:.c=.o)
 
 all: $(NAME)
 
-library: $(INC)
-	ar rc $(NAME) $(OBJ)
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 clean:
-	rm -rf $(OBJ)
+	$(RM) $(OBJ)
 
 fclean: clean
-	rm -rf $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
