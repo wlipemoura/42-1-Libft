@@ -6,7 +6,7 @@
 /*   By: wfelipe- < wfelipe-@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 20:39:26 by wfelipe-          #+#    #+#             */
-/*   Updated: 2021/09/04 20:39:28 by wfelipe-         ###   ########.fr       */
+/*   Updated: 2021/09/06 17:24:41 by wfelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -205,7 +205,7 @@ char	*ft_strdup(const char *s);
  * @return the total length of the string the function tried to create.
  * It means the inicial length of 'dst' plus the length of 'src'.
  */
-char	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 /**
  * @brief copies up to size - 1 characters from the
@@ -220,7 +220,7 @@ char	ft_strlcat(char *dst, const char *src, size_t size);
  * Atention: it will always copies size-1 bytes to guarantee that the dst will
  * be NUL-ended.
  */
-char	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 /**
  * @brief Calculate the length of string (excluding NULL character).

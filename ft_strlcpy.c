@@ -6,13 +6,13 @@
 /*   By: wfelipe- < wfelipe-@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:15:10 by wfelipe-          #+#    #+#             */
-/*   Updated: 2021/09/04 19:15:11 by wfelipe-         ###   ########.fr       */
+/*   Updated: 2021/09/06 17:25:27 by wfelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	counter;
 
