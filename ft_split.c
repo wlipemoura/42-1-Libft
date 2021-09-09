@@ -6,7 +6,7 @@
 /*   By: wfelipe- < wfelipe-@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:14:52 by wfelipe-          #+#    #+#             */
-/*   Updated: 2021/09/04 19:14:53 by wfelipe-         ###   ########.fr       */
+/*   Updated: 2021/09/09 18:25:00 by wfelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,29 +56,29 @@ static void	freespace(char **s, size_t count)
 
 static void	splitter(const char *s, char c, size_t *manystrs, char **spltd)
 {
-	size_t	hmnychar_index;
 	size_t	hmnyspltd_index;
+	size_t	hmnychar_index;
 
-	hmnychar_index = 0;
 	hmnyspltd_index = 0;
-	while (*s && hmnychar_index < *manystrs)
+	hmnychar_index = 0;
+	while (*s && hmnyspltd_index < *manystrs)
 	{
 		while (*s == c)
 			s++;
-		if (hmnyspltd_index == 0)
-			*(spltd + hmnychar_index) = ft_calloc (1, chars(s, c) + 1);
+		if (hmnychar_index == 0)
+			*(spltd + hmnyspltd_index) = ft_calloc (1, chars(s, c) + 1);
 		if (!spltd)
 		{
-			freespace(spltd, hmnychar_index);
+			freespace(spltd, hmnyspltd_index);
 			return ;
 		}
-		spltd[hmnychar_index][hmnyspltd_index] = *s;
+		spltd[hmnyspltd_index][hmnychar_index] = *s;
 		s++;
-		hmnyspltd_index++;
+		hmnychar_index++;
 		if (*s == c)
 		{
-			hmnychar_index++;
-			hmnyspltd_index = 0;
+			hmnyspltd_index++;
+			hmnychar_index = 0;
 		}
 	}
 }
