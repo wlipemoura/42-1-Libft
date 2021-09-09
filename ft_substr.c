@@ -6,7 +6,7 @@
 /*   By: wfelipe- < wfelipe-@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:15:32 by wfelipe-          #+#    #+#             */
-/*   Updated: 2021/09/09 18:18:14 by wfelipe-         ###   ########.fr       */
+/*   Updated: 2021/09/09 18:50:36 by wfelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	counter = 0;
 	if (!s)
-		return (ft_strdup(""));
+	{
+		substring = ft_calloc(1, sizeof(char));
+		ft_memmove(substring, "", 1);
+		return (substring);
+	}
 	if (start > ft_strlen(s))
 		substring_length = 0;
 	else
