@@ -6,7 +6,7 @@
 /*   By: wfelipe- < wfelipe-@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:14:58 by wfelipe-          #+#    #+#             */
-/*   Updated: 2021/09/09 18:10:07 by wfelipe-         ###   ########.fr       */
+/*   Updated: 2021/09/09 18:10:50 by wfelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ char	*ft_strdup(const char *s)
 	new_string = malloc(length * sizeof(char));
 	if (!new_string)
 		return (NULL);
-	ft_memdup(new_string, s, length);
+	ft_memmove(new_string, s, length);
 	return (new_string);
 }
