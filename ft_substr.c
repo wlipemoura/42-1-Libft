@@ -6,7 +6,7 @@
 /*   By: wfelipe- < wfelipe-@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:15:32 by wfelipe-          #+#    #+#             */
-/*   Updated: 2021/09/09 18:50:36 by wfelipe-         ###   ########.fr       */
+/*   Updated: 2021/09/29 23:26:56 by wfelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	counter;
 	char	*substring;
 	size_t	substring_length;
 
-	counter = 0;
 	if (!s)
 	{
 		substring = ft_calloc(1, sizeof(char));

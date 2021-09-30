@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putunbr_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wfelipe- < wfelipe-@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:14:46 by wfelipe-          #+#    #+#             */
-/*   Updated: 2021/09/28 15:32:02 by wfelipe-         ###   ########.fr       */
+/*   Updated: 2021/09/28 15:43:35 by wfelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static void	core(unsigned int integer, int fd)
 {
-	size_t	result;
-	size_t	midzeros_verifier;
+	unsigned int	result;
+	unsigned int	midzeros_verifier;
 
 	result = 10;
 	while ((integer / result) >= 10)
@@ -39,7 +39,7 @@ static void	core(unsigned int integer, int fd)
 	return ;
 }
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putunbr_fd(unsigned int n, int fd)
 {
 	unsigned int	integer;
 

@@ -6,7 +6,7 @@
 /*   By: wfelipe- < wfelipe-@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 20:39:26 by wfelipe-          #+#    #+#             */
-/*   Updated: 2021/09/06 17:24:41 by wfelipe-         ###   ########.fr       */
+/*   Updated: 2021/09/29 23:27:12 by wfelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -419,5 +419,29 @@ char	*ft_strtrim(char const *s1, char const *set);
  * @return NULL if the allocation fails.
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+/**
+ * @brief Outputs the integer 's' to the given file descriptor.
+ *
+ * @param n Is the integer to output.
+ * @param fd Is the File Descriptor on which to write.
+ *
+ * @return none.
+ */
+void	wm_putunbr_fd(unsigned int n, int fd);
+
+/**
+ * @brief calculates the result of exponentiation of 'basis' to the power
+ * of 'exponent'.
+ * 
+ * @param basis is the basis of the calculation.
+ * @param exponent is the power of the basis.
+ * 
+ * @return The result of the exponentiation.
+ * @return '\0' if both basis and exponent are equal to zero.
+ */
+int		wm_power(int basis, size_t exponent);
+
+char	*wm_itoabase(unsigned int number, int base);
 
 #endif
