@@ -6,7 +6,7 @@
 /*   By: wfelipe- < wfelipe-@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 20:39:26 by wfelipe-          #+#    #+#             */
-/*   Updated: 2021/09/29 23:27:12 by wfelipe-         ###   ########.fr       */
+/*   Updated: 2021/09/29 23:36:20 by wfelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -442,6 +442,6 @@ void	wm_putunbr_fd(unsigned int n, int fd);
  */
 int		wm_power(int basis, size_t exponent);
 
-char	*wm_itoabase(unsigned int number, int base);
+char	*wm_itoabase(unsigned int number, unsigned int base);
 
 #endif

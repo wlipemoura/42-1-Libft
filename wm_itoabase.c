@@ -1,6 +1,6 @@
 #include "libft.h"
 
-static int	ft_count_ch_tobase(unsigned int integer, int base)
+static int	ft_count_ch_tobase(unsigned int integer, unsigned int base)
 {
 	size_t	thismanychars;
 
@@ -21,7 +21,7 @@ static int	ft_count_ch_tobase(unsigned int integer, int base)
 	return (thismanychars);
 }
 
-char	*wm_itoabase(unsigned int number, int base)
+char	*wm_itoabase(unsigned int number, unsigned int base)
 {
 	char			*converted_number;
 	size_t			thismanychars;

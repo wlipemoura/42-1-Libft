@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putunbr_fd.c                                    :+:      :+:    :+:   */
+/*   wm_putunbr_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wfelipe- < wfelipe-@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 19:14:46 by wfelipe-          #+#    #+#             */
-/*   Updated: 2021/09/28 15:43:35 by wfelipe-         ###   ########.fr       */
+/*   Updated: 2021/09/29 23:40:13 by wfelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static void	core(unsigned int integer, int fd)
 	return ;
 }
 
-void	ft_putunbr_fd(unsigned int n, int fd)
+void	wm_putunbr_fd(unsigned int n, int fd)
 {
 	unsigned int	integer;
 
