@@ -6,7 +6,7 @@
 /*   By: wfelipe- < wfelipe-@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 20:39:26 by wfelipe-          #+#    #+#             */
-/*   Updated: 2021/09/29 23:36:20 by wfelipe-         ###   ########.fr       */
+/*   Updated: 2021/10/08 12:57:03 by wfelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -428,7 +428,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
  *
  * @return none.
  */
-void	wm_putunbr_fd(unsigned int n, int fd);
+void	ft_putunbr_fd(unsigned int n, int fd);
 
 /**
  * @brief calculates the result of exponentiation of 'basis' to the power
@@ -440,8 +440,10 @@ void	wm_putunbr_fd(unsigned int n, int fd);
  * @return The result of the exponentiation.
  * @return '\0' if both basis and exponent are equal to zero.
  */
-int		wm_power(int basis, size_t exponent);
+int		ft_power(int basis, size_t exponent);
 
-char	*wm_itoabase(unsigned int number, unsigned int base);
+char	*ft_itoa_base(unsigned int number, unsigned int base);
+
+char	*ft_itoa_base_upper(unsigned int number, unsigned int base);
 
 #endif

@@ -45,9 +45,10 @@ SRC = \
 	ft_strlen.c \
 	ft_strlcat.c \
 	ft_striteri.c \
-	wm_putunbr_fd.c \
-	wm_power.c \
-	wm_itoabase.c
+	ft_putunbr_fd.c \
+	ft_power.c \
+	ft_itoa_base.c \
+	ft_itoa_base_upper.c
 
 OBJ = $(SRC:.c=.o)
 
