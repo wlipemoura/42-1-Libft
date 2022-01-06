@@ -48,7 +48,9 @@ SRC = \
 	ft_putunbr_fd.c \
 	ft_power.c \
 	ft_itoa_base.c \
-	ft_itoa_base_upper.c
+	ft_itoa_base_upper.c \
+	ft_get_next_line.c \
+	ft_file_to_array.c
 
 OBJ = $(SRC:.c=.o)
 

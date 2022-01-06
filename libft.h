@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wfelipe- < wfelipe-@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 20:39:26 by wfelipe-          #+#    #+#             */
-/*   Updated: 2021/10/08 12:57:03 by wfelipe-         ###   ########.fr       */
+/*   Updated: 2022/01/06 21:35:25 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -445,5 +445,31 @@ int		ft_power(int basis, size_t exponent);
 char	*ft_itoa_base(unsigned int number, unsigned int base);
 
 char	*ft_itoa_base_upper(unsigned int number, unsigned int base);
+
+/**
+ * @brief read BUFFER_SIZE on a FD and return the line read until found a '\\n'
+ * or until the end of the file, if it doesn't find a '\\n'. It can be called
+ * more than once to read the following lines on the same file, until reach
+ * the end of it.
+ * 
+ * @param fd is the File Descriptor associated to the reading.
+ * @param buffer_size is how many bytes of the file will be read (it does not
+ * matter to the results, because it will return always the line read. It is
+ * just important to the function's construction).
+ * 
+ * @return the line read including '\\n' or NULL if the file is 
+ * empty or an error occurred.
+ */
+char	*ft_get_next_line(int fd, int buffer_size);
+
+/**
+ * @brief read an entire file and allocate its content in an array.
+ * 
+ * @param fd is the File Descriptor associated to the file.
+ * 
+ * @return a pointer to the created array with the content of the read file 
+ * or NULL if the file is empty or an error occurred.
+ */
+char	*ft_file_to_array(int fd);
 
 #endif
