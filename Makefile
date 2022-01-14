@@ -4,7 +4,7 @@ INC = libft.h
 
 CC = clang
 
-FLAGS = -Wall -Wextra -Werror -c
+FLAGS = -Wall -Wextra -Werror -c -fPIE
 
 RM = rm -f
 
@@ -50,7 +50,8 @@ SRC = \
 	ft_itoa_base.c \
 	ft_itoa_base_upper.c \
 	ft_get_next_line.c \
-	ft_file_to_array.c
+	ft_file_to_array.c \
+	ft_strrncmp.c
 
 OBJ = $(SRC:.c=.o)
 

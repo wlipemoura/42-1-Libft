@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_next_line.c                                    :+:      :+:    :+:   */
+/*   ft_get_next_line.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 19:19:22 by wfelipe-          #+#    #+#             */
-/*   Updated: 2022/01/06 20:58:21 by coder            ###   ########.fr       */
+/*   Updated: 2022/01/07 19:06:32 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,3 @@ char	*ft_get_next_line(int fd, int buffer_size)
 		return (ft_strjoin_and_free(&line, &auxiliar, 0));
 	return (ft_get_next_line(fd, buffer_size));
 }
-

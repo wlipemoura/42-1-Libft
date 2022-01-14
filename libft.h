@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 20:39:26 by wfelipe-          #+#    #+#             */
-/*   Updated: 2022/01/06 21:35:25 by coder            ###   ########.fr       */
+/*   Updated: 2022/01/07 19:14:58 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -391,7 +391,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
  * @return The string created from the successive applications of 'f'.
  * @return NULL if the allocation fails.
  */
-char	*ft_strmapi(char const *s, char(*f)(unsigned int, char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 /**
  * @brief Allocates (with malloc) and returns a copy of 's1' with each of the
@@ -471,5 +471,19 @@ char	*ft_get_next_line(int fd, int buffer_size);
  * or NULL if the file is empty or an error occurred.
  */
 char	*ft_file_to_array(int fd);
+
+/**
+ * @brief compare two strings, s1 and s2, limited to compare only the last
+ * (at most) 'n' bytes of s1 and s2.
+ *
+ * @param s1 is a pointer to the string 1 to be compared.
+ * @param s2 is a pointer to the string 2 to be compared.
+ * @param n is how many bytes will be analyzed in both strings.
+ *
+ * @return an integer less than zero if 's1' < 's2';
+ * @return an integer greater than zero if 's1' > 's2';
+ * @return 0 if the bytes analized match.
+ */
+int	ft_strrncmp(const char *s1, const char *s2, size_t n);
 
 #endif

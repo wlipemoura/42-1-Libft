@@ -6,14 +6,11 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 21:23:54 by coder             #+#    #+#             */
-/*   Updated: 2022/01/06 21:23:59 by coder            ###   ########.fr       */
+/*   Updated: 2022/01/07 19:10:12 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"//modify the includes to just the essential
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 #include <fcntl.h>
 
 char	*ft_strjoin_and_free_new(char **s1, char **s2, int return_flag)
@@ -48,11 +45,12 @@ char	*ft_file_to_array(int fd)
 	int			end_file_identifier;
 
 	end_file_identifier = 1;
-	while(end_file_identifier != 0)
+	while (end_file_identifier != 0)
 	{
 		auxiliar = ft_calloc (1 + 1, sizeof(char));
 		end_file_identifier = read(fd, auxiliar, 1);
-		if (fd < 0 || (!*auxiliar && !line) || !auxiliar || read(fd, auxiliar, 0))
+		if (fd < 0 || (!*auxiliar && !line)
+			|| !auxiliar || read(fd, auxiliar, 0))
 			return (ft_strjoin_and_free_new(&auxiliar, &auxiliar, 1));
 		if (line && *auxiliar)
 			line = ft_strjoin_and_free_new(&line, &auxiliar, 0);
@@ -61,9 +59,3 @@ char	*ft_file_to_array(int fd)
 	}
 	return (ft_strjoin_and_free_new(&line, &auxiliar, 0));
 }
-/* 
-int	main(void)
-{
-	int fd = open("subject.ber", O_RDONLY);
-	printf("O mapa em formato de array é: %s\n", ft_file_to_array(fd));
-} */
