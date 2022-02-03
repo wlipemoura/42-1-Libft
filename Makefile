@@ -2,9 +2,9 @@ NAME = libft.a
 
 INC = libft.h
 
-CC = clang
+CC = gcc
 
-FLAGS = -Wall -Wextra -Werror -c -fPIE
+FLAGS = -Wall -Wextra -Werror -c
 
 RM = rm -f
 
@@ -51,7 +51,8 @@ SRC = \
 	ft_itoa_base_upper.c \
 	ft_get_next_line.c \
 	ft_file_to_array.c \
-	ft_strrncmp.c
+	ft_strrncmp.c \
+	ft_2d_array_print.c \
 
 OBJ = $(SRC:.c=.o)
 

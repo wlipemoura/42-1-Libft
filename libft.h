@@ -6,7 +6,7 @@
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/04 20:39:26 by wfelipe-          #+#    #+#             */
-/*   Updated: 2022/01/07 19:14:58 by coder            ###   ########.fr       */
+/*   Updated: 2022/02/03 03:38:12 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -484,6 +484,18 @@ char	*ft_file_to_array(int fd);
  * @return an integer greater than zero if 's1' > 's2';
  * @return 0 if the bytes analized match.
  */
-int	ft_strrncmp(const char *s1, const char *s2, size_t n);
+int		ft_strrncmp(const char *s1, const char *s2, size_t n);
+
+/**
+ * @brief print on terminal a array of 2 dimensions, considering that all lines
+ * have the same length and all columns have the same length.
+ *
+ * @param matrix is a pointer to the matrix.
+ * @param width is the length of the line.
+ * @param height is the length of the column.
+ *
+ * @return 0
+ */
+int		ft_2d_array_print(char **matrix, int width, int height);
 
 #endif
